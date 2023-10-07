@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://bw4yph53kaqk5"]
+
+[ext_resource type="Script" path="res://addons/scatternetwx/ExtrudePlane3D.gd" id="2_n1agn"]
+[ext_resource type="Curve3D" uid="uid://bfda27e8es0gj" path="res://tmpcurve.tres" id="3_0mcqg"]
+[ext_resource type="Script" path="res://addons/scatternetwx/ExtrudeMesh3D.gd" id="3_2opku"]
+[ext_resource type="Material" uid="uid://pgbesm6pja8y" path="res://addons/scatternetwx/materials/placeholder_material_street.tres" id="4_obxal"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="ExtrudePlane3D" type="Node3D" parent="." node_paths=PackedStringArray("path")]
+script = ExtResource("2_n1agn")
+path = NodePath("Path3D")
+width = 4.0
+sections = 80
+
+[node name="Path3D" type="Path3D" parent="ExtrudePlane3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0105435, 0, 0)
+curve = ExtResource("3_0mcqg")
+
+[node name="ExtrudeMesh3D" type="Node3D" parent="." node_paths=PackedStringArray("path")]
+visible = false
+script = ExtResource("3_2opku")
+path = NodePath("../ExtrudePlane3D/Path3D")
+shape = PackedVector2Array(1, 1, -1, 1, -1, -1, 1, -1, 1, 1)
+sections = 30
+materials = Array[Material]([ExtResource("4_obxal"), ExtResource("4_obxal"), ExtResource("4_obxal"), ExtResource("4_obxal")])
