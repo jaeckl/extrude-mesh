@@ -10,11 +10,11 @@ config_version=5
 
 [application]
 
-config/name="ScatterNetwX"
-run/main_scene="res://node_3d.tscn"
+config/name="ExtrudeGeometry"
+run/main_scene="res://addons/extrude-geometry/example/example.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
 config/icon="res://icon.svg"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/scatternetwx/plugin.cfg")
+enabled=PackedStringArray()
