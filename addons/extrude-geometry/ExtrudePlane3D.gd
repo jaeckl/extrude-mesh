@@ -31,7 +31,7 @@ func generate():
 		return
 
 	material.set_shader_parameter("repetition",float(path.curve.get_baked_length()/width))
-	child.mesh = GeometryExtrusion.generate_extruded_plane(path.curve,1,material)
+	child.mesh = GeometryExtrusion.generate_extruded_plane(path.curve,width,material)
 
 
 func _init():

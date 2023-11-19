@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://bw4yph53kaqk5"]
+[gd_scene load_steps=6 format=3 uid="uid://bw4yph53kaqk5"]
 
 [ext_resource type="Script" path="res://addons/extrude-geometry/ExtrudePlane3D.gd" id="2_n1agn"]
 [ext_resource type="Curve3D" uid="uid://bfda27e8es0gj" path="res://addons/extrude-geometry/example/curve.tres" id="3_0mcqg"]
 [ext_resource type="Script" path="res://addons/extrude-geometry/ExtrudeMesh3D.gd" id="3_2opku"]
 [ext_resource type="Material" uid="uid://pgbesm6pja8y" path="res://addons/extrude-geometry/materials/placeholder_material_street.tres" id="4_obxal"]
+[ext_resource type="Script" path="res://addons/extrude-geometry/TestSandBox.gd" id="5_ihgm2"]
 
 [node name="Node3D" type="Node3D"]
 
@@ -25,5 +26,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0105435, 0, 0)
 curve = ExtResource("3_0mcqg")
 
 [node name="Polygon2D" type="Polygon2D" parent="."]
-polygon = PackedVector2Array(-3, -3, 3, -3, 3, 3, -3, 3)
+polygon = PackedVector2Array(-2, -2, 2, -2, 2, 2, -2, 2)
 uv = PackedVector2Array(0, 0, 1, 0, 0, 1, 1, 1)
+
+[node name="TestSandBox" type="Node3D" parent="."]
+script = ExtResource("5_ihgm2")
