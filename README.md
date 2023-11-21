@@ -25,7 +25,7 @@ The width of the generated geometry orthogonal to the paths direction.
 
 - ShaderMaterial material
 
-The material used for the generated geometry. The generated UV map streches along the entire width and length of the generated geometry. A new shader must export the shader paramete "repetition" which is of type `int`.
+The material used for the generated geometry. The generated UV map streches along the entire width and length of the generated geometry. A new shader must export the shader parameter "repetition" which is of type `int`.
 
 <hr>
 
@@ -44,3 +44,6 @@ The polygon which will get extruded. Each edge will get extruded along the path.
 - Array[ShaderMaterial] materials
 
 The materials used for the generated geometry. The generated UV map streches along the entire width and length of the generated geometry. The index of each material corresponds with each edge of the `Polygon2D`
+
+## Disclaimer
+This project is not in active development. For me it is just a creative side project. I won't update or add new features regularly. While my goal is to create some 'Cities Skylines' like road building tool for the Godot Game Engine this is not a the repository that I will update regularly.

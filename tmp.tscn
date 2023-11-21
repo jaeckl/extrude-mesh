@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://cdy44ihkvi0gc"]
+
+[ext_resource type="Script" path="res://tmp.gd" id="1_eymbm"]
+
+[sub_resource type="Curve3D" id="Curve3D_yo288"]
+bake_interval = 0.1
+_data = {
+"points": PackedVector3Array(-0.0101019, 0.153257, -0.444637, 0, 0, 0.5, 0, 0, 0, -0.5, 0, 0, -0.906794, 0.0889771, -0.0205491, 1, 0, 1),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_uiwsu"]
+bake_interval = 0.1
+_data = {
+"points": PackedVector3Array(-0.0101019, 0.153257, -0.444637, 0, 0, 0.370821, 0, 0, 0, -0.346069, 0, -0.166857, -0.906794, 0.0889771, -0.0205491, 0.621085, 0, 0.908499),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[node name="Node3D" type="Node3D"]
+
+[node name="PathA" type="Path3D" parent="."]
+curve = SubResource("Curve3D_yo288")
+
+[node name="Path3D" type="Path3D" parent="."]
+curve = SubResource("Curve3D_uiwsu")
+script = ExtResource("1_eymbm")
+reduction = 0.4
